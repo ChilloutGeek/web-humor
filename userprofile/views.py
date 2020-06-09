@@ -10,7 +10,6 @@ from django.contrib import messages
 from .forms import CreateUserForm
 from .models import Profile
 
-
 def register(request):
     
     form = CreateUserForm()
@@ -48,3 +47,9 @@ def loginpage(request):
 def logoutuser(request):
     logout(request)
     return redirect('login')
+
+
+class AccProfile(TemplateView):
+    
+    template_name = 'accprofile.html'
+    

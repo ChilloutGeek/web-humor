@@ -8,6 +8,7 @@ class Profile(models.Model):
     name = models.CharField(max_length=250)
     datecreated = models.DateTimeField(auto_now_add=True)
     description = models.CharField(max_length=250, default='')
+    featuredjoke = models.CharField(max_length=250, default='')
 
     def __str__(self):
         return self.name
